@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#120d12">
+  <meta name="description" content="任甜甜（梦怡）的个人介绍页。">
+  <title>任甜甜 · 梦怡</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23120d12'/%3E%3Ccircle cx='24' cy='31' r='13' fill='%23f0e4d8' fill-opacity='.92'/%3E%3Ccircle cx='40' cy='31' r='13' fill='%23d94438' fill-opacity='.82'/%3E%3C/svg%3E">
+  <style>
+    :root{--ink:#120d12;--paper:#f0e7dc;--red:#d94438;--blue:#315be7;--muted:#a89ca6;--line:rgba(240,231,220,.18)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--paper);font-family:Inter,"PingFang SC","Microsoft YaHei",sans-serif;overflow-x:hidden}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(600px circle at var(--x,72%) var(--y,18%),rgba(49,91,231,.12),transparent 58%);z-index:0}
+    a{color:inherit;text-decoration:none}button{font:inherit}.shell{width:min(1320px,calc(100% - 48px));margin:auto;position:relative;z-index:1}
+    .nav{height:82px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line)}
+    .brand{font:600 14px/1 Georgia,"Songti SC",serif;letter-spacing:.16em}.brand i{color:var(--red);font-style:normal}
+    .nav-links{display:flex;gap:28px;color:var(--muted);font-size:13px}.nav-links a{transition:.25s}.nav-links a:hover{color:var(--paper)}
+    .hero{min-height:calc(100svh - 82px);display:grid;grid-template-columns:1.08fr .92fr;align-items:center;gap:clamp(40px,7vw,110px);padding:64px 0 78px}
+    .eyebrow{display:flex;align-items:center;gap:14px;color:var(--muted);font-size:12px;letter-spacing:.24em;text-transform:uppercase}.eyebrow:before{content:"";width:46px;height:1px;background:var(--red)}
+    h1{font-family:Georgia,"Songti SC","STSong",serif;font-weight:400;font-size:clamp(88px,13vw,188px);line-height:.83;letter-spacing:-.07em;margin:34px 0 30px;white-space:nowrap}
+    h1 span{display:block;margin-left:clamp(42px,8vw,120px);color:transparent;-webkit-text-stroke:1px rgba(240,231,220,.72);font-style:italic}
+    .intro{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;max-width:600px}.age{width:78px;height:78px;border:1px solid var(--line);border-radius:50%;display:grid;place-content:center;text-align:center;color:var(--red);font:600 26px/1 Georgia,serif}.age small{font:11px/1.6 sans-serif;letter-spacing:.15em;color:var(--muted)}
+    .intro p{margin:0;color:#c9bdc4;font-size:17px;line-height:1.9}.intro strong{color:var(--paper);font-weight:500}
+    .hero-art{position:relative;justify-self:end;width:min(100%,520px)}.art-frame{position:relative;aspect-ratio:4/5;overflow:hidden;border-radius:230px 230px 18px 18px;border:1px solid var(--line);background:#21151d}
+    .art-frame:after{content:"";position:absolute;inset:0;box-shadow:inset 0 0 100px rgba(0,0,0,.35);pointer-events:none}.art-frame img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}.art-frame:hover img{transform:scale(1.035)}
+    .art-note{position:absolute;left:-36px;bottom:62px;padding:14px 18px;background:var(--blue);color:white;font-size:11px;letter-spacing:.18em;transform:rotate(-90deg);transform-origin:left bottom}.art-index{position:absolute;right:-18px;top:22%;font:italic 72px/1 Georgia,serif;color:var(--red)}
+    .scroll{position:absolute;bottom:32px;left:0;font-size:11px;letter-spacing:.2em;color:var(--muted);writing-mode:vertical-rl}.scroll:after{content:"";display:inline-block;width:1px;height:50px;background:var(--line);margin-top:12px}
+    .section{padding:130px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:70px}.kicker{color:var(--red);font-size:12px;letter-spacing:.22em}.section h2{margin:14px 0 0;font:400 clamp(42px,7vw,88px)/1.03 Georgia,"Songti SC",serif}.section-head p{max-width:420px;margin:0;color:var(--muted);line-height:1.8}
+    .names{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line)}.name-card{min-height:360px;padding:42px;position:relative;overflow:hidden;cursor:pointer;background:transparent;border:0;color:inherit;text-align:left;transition:.35s}.name-card+.name-card{border-left:1px solid var(--line)}.name-card:hover,.name-card[aria-pressed="true"]{background:var(--paper);color:var(--ink)}
+    .name-card .num{font:italic 16px Georgia,serif;color:var(--red)}.name-card strong{display:block;position:absolute;left:42px;bottom:38px;font:400 clamp(72px,9vw,136px)/.9 Georgia,"Songti SC",serif;letter-spacing:-.06em}.name-card em{position:absolute;right:32px;top:44px;writing-mode:vertical-rl;font-style:normal;font-size:11px;letter-spacing:.24em;color:var(--muted)}
+    .identity-line{min-height:74px;margin-top:28px;color:#c9bdc4;font:italic 22px/1.6 Georgia,"Songti SC",serif}.identity-line span{color:var(--paper)}
+    .about-grid{display:grid;grid-template-columns:.68fr 1.32fr;gap:clamp(50px,10vw,150px)}.seal{width:160px;aspect-ratio:1;border:1px solid var(--red);display:grid;place-content:center;text-align:center;transform:rotate(-7deg);font:400 42px/1.1 Georgia,"Songti SC",serif;color:var(--red)}.seal small{font:10px/1.6 sans-serif;letter-spacing:.2em;margin-top:10px}
+    .about-copy{font:400 clamp(28px,4.2vw,58px)/1.38 Georgia,"Songti SC",serif;margin:0}.about-copy .muted{color:#716671}.about-meta{display:flex;gap:34px;margin-top:48px;padding-top:25px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}.about-meta b{display:block;color:var(--paper);font:500 18px/1.6 Georgia,"Songti SC",serif}
+    footer{padding:38px 0 52px;border-top:1px solid var(--line);display:flex;justify-content:space-between;color:var(--muted);font-size:12px;letter-spacing:.08em}footer b{color:var(--paper);font-weight:500}
+    .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s,transform .8s}.reveal.on{opacity:1;transform:none}
+    @media(max-width:900px){.shell{width:min(100% - 30px,720px)}.hero{grid-template-columns:1fr;padding-top:50px}.hero-art{width:min(88%,520px);justify-self:center}.scroll{display:none}h1{font-size:clamp(78px,24vw,150px)}.section{padding:88px 0}.section-head{display:block}.section-head p{margin-top:24px}.about-grid{grid-template-columns:1fr}.seal{width:120px;font-size:32px}.names{grid-template-columns:1fr}.name-card+.name-card{border-left:0;border-top:1px solid var(--line)}}
+    @media(max-width:560px){.nav-links{gap:16px}.hero{padding-bottom:70px}.eyebrow{letter-spacing:.14em}h1{font-size:21vw}.intro{grid-template-columns:1fr}.age{width:66px;height:66px;font-size:22px}.art-note{left:-10px}.art-index{right:4px}.name-card{min-height:250px;padding:28px}.name-card strong{left:28px;bottom:28px}.section-head{margin-bottom:44px}.about-meta{flex-direction:column;gap:16px}footer{gap:16px;flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+  </style>
+</head>
+<body>
+  <header class="shell nav">
+    <a class="brand" href="#top">REN <i>×</i> MENGYI</a>
+    <nav class="nav-links" aria-label="页面导航"><a href="#names">名字</a><a href="#about">关于</a></nav>
+  </header>
+
+  <main id="top">
+    <section class="shell hero">
+      <div class="hero-copy">
+        <div class="eyebrow">Personal introduction · 个人介绍</div>
+        <h1>任甜甜<span>梦怡</span></h1>
+        <div class="intro">
+          <div class="age">30<small>YEARS</small></div>
+          <p>你好，我是<strong>任甜甜</strong>，也可以叫我<strong>梦怡</strong>。<br>两个名字，都是我。</p>
+        </div>
+      </div>
+      <figure class="hero-art">
+        <div class="art-frame"><img src="assets/dream-bloom.png" alt="深色背景中的透明花朵艺术图"></div>
+        <figcaption class="art-note">DREAM / BLOOM / SELF</figcaption>
+        <span class="art-index" aria-hidden="true">30</span>
+      </figure>
+      <a class="scroll" href="#names">向下认识我</a>
+    </section>
+
+    <section class="section" id="names">
+      <div class="shell reveal">
+        <div class="section-head">
+          <div><span class="kicker">01 · TWO NAMES</span><h2>一个我，两种称呼</h2></div>
+          <p>名字是认识一个人的开场。点击其中一张名片，看看不同的称呼如何指向同一个我。</p>
+        </div>
+        <div class="names" role="group" aria-label="选择称呼">
+          <button class="name-card" aria-pressed="true" data-name="任甜甜"><span class="num">A / 01</span><em>正式姓名</em><strong>任甜甜</strong></button>
+          <button class="name-card" aria-pressed="false" data-name="梦怡"><span class="num">B / 02</span><em>另一个名字</em><strong>梦怡</strong></button>
+        </div>
+        <p class="identity-line" aria-live="polite">现在，你可以叫我 <span>任甜甜</span>。</p>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="shell about-grid reveal">
+        <div class="seal">甜甜<small>THIRTY</small></div>
+        <div>
+          <span class="kicker">02 · ABOUT ME</span>
+          <p class="about-copy">三十岁，正好拥有足够的笃定，<span class="muted">也保留继续认识世界的好奇。</span></p>
+          <div class="about-meta"><div>姓名<b>任甜甜</b></div><div>别名<b>梦怡</b></div><div>年龄<b>30岁</b></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell"><span><b>任甜甜 · 梦怡</b></span><span>PERSONAL PAGE · <span id="year"></span></span></footer>
+
+  <script>
+    document.getElementById('year').textContent=new Date().getFullYear();
+    document.querySelectorAll('.name-card').forEach(card=>card.addEventListener('click',()=>{
+      document.querySelectorAll('.name-card').forEach(c=>c.setAttribute('aria-pressed','false'));
+      card.setAttribute('aria-pressed','true');
+      document.querySelector('.identity-line span').textContent=card.dataset.name;
+    }));
+    const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting)entry.target.classList.add('on')}),{threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+    window.addEventListener('pointermove',e=>{document.body.style.setProperty('--x',e.clientX+'px');document.body.style.setProperty('--y',e.clientY+'px')},{passive:true});
+  </script>
+</body>
+</html>
